@@ -1,9 +1,9 @@
 {
-	"name": "change-case-keys",
+	"name": "change-any-case-keys",
 	"version": "1.0.0",
 	"description": "Convert object keys to any case",
 	"license": "MIT",
-	"repository": "lucascco/change-case-keys",
+	"repository": "lucascco/change-any-case-keys",
 	"engines": {
 		"node": ">=8"
 	},

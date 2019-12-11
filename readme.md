@@ -4,14 +4,14 @@
 ## Install
 
 ```
-$ npm install change-case-keys
+$ npm install change-any-case-keys
 ```
 
 
 ## Usage
 
 ```js
-const camelcaseKeys = require('change-case-keys');
+const camelcaseKeys = require('change-any-case-keys');
 
 // Convert an object
 camelcaseKeys({'foo-bar': true});
