@@ -8,6 +8,13 @@ declare namespace camelcaseKeys {
 		readonly deep?: boolean;
 
 		/**
+		Conversion kind specified in blakeembrey/change-case
+
+		@default false
+		*/
+		readonly kindCase?: string;
+
+		/**
 		Exclude keys from being camel-cased.
 
 		@default []

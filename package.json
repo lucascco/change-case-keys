@@ -1,20 +1,15 @@
 {
-	"name": "camelcase-keys",
-	"version": "6.1.1",
-	"description": "Convert object keys to camel case",
+	"name": "change-case-keys",
+	"version": "1.0.0",
+	"description": "Convert object keys to any case",
 	"license": "MIT",
-	"repository": "sindresorhus/camelcase-keys",
-	"author": {
-		"name": "Sindre Sorhus",
-		"email": "sindresorhus@gmail.com",
-		"url": "sindresorhus.com"
-	},
+	"repository": "lucascco/change-case-keys",
 	"engines": {
 		"node": ">=8"
 	},
 	"scripts": {
-		"test": "xo && ava && tsd",
-		"bench": "matcha bench/bench.js"
+		"test": "npx xo && npx ava && npx tsd",
+		"bench": "npx matcha bench/bench.js"
 	},
 	"files": [
 		"index.js",
@@ -47,7 +42,7 @@
 		"recursive"
 	],
 	"dependencies": {
-		"camelcase": "^5.3.1",
+		"change-case": "^4.1.0",
 		"map-obj": "^4.0.0",
 		"quick-lru": "^4.0.1"
 	},

@@ -2,6 +2,7 @@
 'use strict';
 const camelcaseKeysNpm = require('camelcase-keys');
 const fixture = require('./fixture');
+const fixtureCamelCase = require('./fixture_camelCase');
 const camelcaseKeys = require('..');
 
 suite('camelcaseKeys', () => {
@@ -12,6 +13,10 @@ suite('camelcaseKeys', () => {
 	});
 
 	bench('master', () => {
-		camelcaseKeys(fixture, {deep: true});
+		const teste = camelcaseKeys(fixture, {deep: true});
+	});
+
+	bench('camelCase_snakeCase', () => {
+		camelcaseKeys(fixtureCamelCase, {deep: true, kindCase: 'snakeCase'});
 	});
 });

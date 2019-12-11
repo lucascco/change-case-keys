@@ -1,7 +1,7 @@
 'use strict';
 const mapObj = require('map-obj');
-const camelCase = require('camelcase');
 const QuickLru = require('quick-lru');
+const changeCase = require('change-case');
 
 const has = (array, key) => array.some(x => {
 	if (typeof x === 'string') {
@@ -25,11 +25,11 @@ const isObject = value =>
 const camelCaseConvert = (input, options) => {
 	options = {
 		deep: false,
-		pascalCase: false,
+		kindCase: 'camelCase',
 		...options
 	};
 
-	const {exclude, pascalCase, stopPaths, deep} = options;
+	const {exclude, stopPaths, deep, kindCase} = options;
 
 	const stopPathsSet = stopPaths === undefined ? new Set() : new Set(stopPaths);
 
@@ -44,7 +44,7 @@ const camelCaseConvert = (input, options) => {
 			if (cache.has(key)) {
 				key = cache.get(key);
 			} else {
-				const ret = camelCase(key, {pascalCase});
+				const ret = changeCase[kindCase](key);
 
 				if (key.length < 100) { // Prevent abuse
 					cache.set(key, ret);

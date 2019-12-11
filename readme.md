@@ -1,19 +1,17 @@
-# camelcase-keys [![Build Status](https://travis-ci.org/sindresorhus/camelcase-keys.svg?branch=master)](https://travis-ci.org/sindresorhus/camelcase-keys)
-
-> Convert object keys to camel case using [`camelcase`](https://github.com/sindresorhus/camelcase)
+> This lib is a merge of amazing libs [`change-case`](https://github.com/blakeembrey/change-case) and [`camelcase-keys`](https://github.com/sindresorhus/camelcase-keys)
 
 
 ## Install
 
 ```
-$ npm install camelcase-keys
+$ npm install change-case-keys
 ```
 
 
 ## Usage
 
 ```js
-const camelcaseKeys = require('camelcase-keys');
+const camelcaseKeys = require('change-case-keys');
 
 // Convert an object
 camelcaseKeys({'foo-bar': true});
